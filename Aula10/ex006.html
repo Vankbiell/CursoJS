@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Dom</title>
+    <style>
+        div#area /*div é o nome do elemento.# representa que é um id do nome area */ {
+            background-color: green;
+            font: normal 20pt Arial;
+            color: white; /* Cor da letra */
+            width: 200px; /*largura*/
+            height: 200px; /*altura*/
+            text-align: center; /*alinhamento do texto para o meio da linha*/
+            line-height: 200px; /*alinhamento do texto para altura*/
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" > <!--Quando eu clico na div eu crio um objeto que é chamado na função clicar dentro do script -->
+        Interaja...
+    </div>
+    <script>
+         var a= window.document.getElementById('area') //passagem de parametro do arquivo html para a parte do script, no caso é uma declaração da variavél que temos fora da função para dentro da função pra o reconhecimento dela dentro da função.
+         a.addEventListener('click', clicar) // o addEventListener serve com una função para ficar de olho nas outras como por exemplo essa de click quando o usuario der um click a função se atrela com o clicar que está marcado e já vai para esta função para executar.
+         a.addEventListener('mouseenter', entrar)
+         a.addEventListener('mouseout', sair)
+        function clicar(){
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+        function entrar(){
+            a.innerText = 'Entrou!'
+        }
+        function sair(){
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>
