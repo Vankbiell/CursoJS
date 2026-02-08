@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Sistema par descobrir se é nativo ou estrangeiro</h1>
+    De onde você é: <input type="text" name="pais" id="pais">
+    <input type="button" value="Indentificar" onclick="indentificar()">
+    <div id="res"></div>
+    <script>
+        function indentificar(){
+            var pais = window.document.querySelector('input#pais')
+            var res = window.document.querySelector('div#res')
+            if (pais.value == 'Brasil'){
+                res.innerHTML = '<p>Você é Brasileiro</p>'
+            }else{
+                res.innerHTML = '<p>Voce é estrangeiro</p>'
+            }
+            }
+    </script>
+</body>
+</html>
