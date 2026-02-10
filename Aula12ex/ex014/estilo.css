@@ -4,6 +4,7 @@ body{
 }
 header{
     color: white;
+    text-align: center;
 }
 section{
     background: white;
@@ -12,7 +13,6 @@ section{
     width: 500px;
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.385);
-
 }
 footer{
     color: white;
@@ -23,4 +23,8 @@ img {
   border-radius: 50%;
   width: 300px;
   height: 300px;
+}
+div{
+    text-align: center;
+    padding: 8px;
 }
