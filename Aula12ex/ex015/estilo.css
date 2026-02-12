@@ -20,3 +20,11 @@ footer{
     text-align: center;
     font-style: italic;
 }
+div#res{
+    text-align: center;
+}
+img{
+    width: 300px;
+    border-radius: 50%;
+    height: 300px;
+}
