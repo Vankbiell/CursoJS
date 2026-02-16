@@ -1,9 +1,10 @@
 body{
-    background-color: rgb(70, 142, 236);
+    background-color: #468eec;
     font: normal 15pt Arial;
 }
 header{
     color: white;
+    text-align: center;
 }
 section{
     background: white;
@@ -18,4 +19,15 @@ footer{
     color: white;
     text-align: center;
     font-style: italic;
+}
+input{
+    border-radius: 10px;
+    padding: 4px;
+    border: 1px solid;
+    background-color: white;
+    
+}
+input#button:hover{
+    background-color: #468eec;
+    color: white;
 }
