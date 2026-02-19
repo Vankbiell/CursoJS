@@ -1,11 +1,28 @@
-function adicionar(){
-    let num = document.getElementById('txtn')
-    let n = Number(num.value)
-    if(n <=1 || n >= 100){
-        window.alert('Os números tem que ser entre 1 à 100')
+let num = document.getElementById('txtn')
+let lista  = document.getElementById('lisnum')
+let res = document.querySelector('div#res')
+let valores = []
+
+function isNumero(n){
+    if(Number(n) >= 1 && Number(n) <= 100){
+        return true
     }else{
-        let item = document.createElement('option')
-        item.text = `O seu número é ${n}`
-        
+        return false
+    }
+}
+
+function inLista(n, l){
+    if(l.indexOf(Number(n)) != -1){
+        return true
+    }else {
+        return false
+    }
+}
+
+function adicionar(){
+    if(isNumero(num.value) && !inLista(num.value, valores)){
+        window.alert('Tudo Ok')
+    }else{
+        window.alert('Valor inválido ou já encontrado na lista!')
     }
 }
