@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#tarefa-input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#tarefa-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+#adicionar-btn {
+    padding: 12px 24px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#adicionar-btn:hover {
+    background: #5a67d8;
+}
+
+.lista-tarefas {
+    list-style: none;
+}
+
+.tarefa-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tarefa-texto {
+    font-size: 16px;
+    color: #333;
+    word-break: break-word;
+    flex: 1;
+}
+
+.tarefa-texto.concluida {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.acoes {
+    display: flex;
+    gap: 8px;
+    margin-left: 15px;
+}
+
+.concluir-btn, .deletar-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.concluir-btn {
+    background: #48bb78;
+    color: white;
+}
+
+.concluir-btn:hover {
+    background: #38a169;
+}
+
+.deletar-btn {
+    background: #f56565;
+    color: white;
+}
+
+.deletar-btn:hover {
+    background: #e53e3e;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .input-container {
+        flex-direction: column;
+    }
+    
+    #adicionar-btn {
+        width: 100%;
+    }
+    
+    .tarefa-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .acoes {
+        margin-left: 0;
+        width: 100%;
+        justify-content: flex-end;
+    }
+}

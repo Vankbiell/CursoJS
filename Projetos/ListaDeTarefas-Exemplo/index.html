@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+        
+        <div class="input-container">
+            <input type="text" id="tarefa-input" placeholder="Digite uma nova tarefa...">
+            <button id="adicionar-btn">Adicionar</button>
+        </div>
+
+        <ul class="lista-tarefas" id="lista-tarefas">
+            <li class="tarefa-item">
+                <span class="tarefa-texto">Estudar HTML</span>
+                <div class="acoes">
+                    <button class="concluir-btn">✓</button>
+                    <button class="deletar-btn">🗑️</button>
+                </div>
+            </li>
+            <li class="tarefa-item">
+                <span class="tarefa-texto">Estudar CSS</span>
+                <div class="acoes">
+                    <button class="concluir-btn">✓</button>
+                    <button class="deletar-btn">🗑️</button>
+                </div>
+            </li>
+            <li class="tarefa-item">
+                <span class="tarefa-texto">Fazer exercícios</span>
+                <div class="acoes">
+                    <button class="concluir-btn">✓</button>
+                    <button class="deletar-btn">🗑️</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>
